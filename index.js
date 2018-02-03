@@ -1,4 +1,6 @@
 const express = require('express')
+const ingReader = require('./models/ingredientReader.js')
+
 const app = express()
 
 app.post('/imageToFlags', function(req, res) {
