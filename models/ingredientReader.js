@@ -10,7 +10,7 @@ var fs = require('fs');
 function ingToFlags(ingredients, callback) {
 	var ingLength = ingredients.length;
 
-	fs.readFile('file', 'utf8', (err, data) => {
+	fs.readFile('../data/flags.json', 'utf8', (err, data) => {
 		if (err) throw err; //if there's some problem (which should NEVER happen)
 		
 		listFlags = JSON.parse(data); //My flag list ... 
