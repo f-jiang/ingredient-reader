@@ -1,10 +1,11 @@
-const express = require('express')
-const ingReader = require('./models/ingredientReader.js')
+const express = require('express');
+const ingReader = require('./models/ingredientReader.js');
+const bodyParser = require('body-parser');
 
-const app = express()
+const app = express();
 
 app.post('/imageToFlags', function(req, res) {
-  console.log('image to flags request');
+  console.log(res);
   res.send('image to flags request');
 });
 
