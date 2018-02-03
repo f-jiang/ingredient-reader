@@ -1,0 +1,22 @@
+{
+  "name": "ingredient-reader",
+  "version": "1.0.0",
+  "description": "Ingredient reader API for QHacks 2018 Kwikee Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f-jiang/ingredient-reader.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f-jiang/ingredient-reader/issues"
+  },
+  "homepage": "https://github.com/f-jiang/ingredient-reader#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
