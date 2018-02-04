@@ -48,6 +48,11 @@ module.exports = {
 			return objOutFlags; //Synchronous
 
 		});
+	},
+
+	jsonToIng: function(bigObj, callback) {
+		var start = "ingredients";
+		
 	}
 
 }
