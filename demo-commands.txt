@@ -1,7 +1,11 @@
 wheat:
-curl -X GET http://localhost:3000/imageToFlags?imgUrl=https://plantbased4health.files.wordpress.com/2015/01/brownine_mix.jpg | python3 -m json.tool | pygmentize -l json | less -R
-curl -X GET http://localhost:3000/imageToIngredients?imgUrl=https://plantbased4health.files.wordpress.com/2015/01/brownine_mix.jpg | python3 -m json.tool | pygmentize -l json | less -R
+curl -X GET http://localhost:3000/imageToFlags?imgUrl=https://plantbased4health.files.wordpress.com/2015/01/brownine_mix.jpg | python3 -m json.tool | less
+curl -X GET http://localhost:3000/imageToIngredients?imgUrl=https://plantbased4health.files.wordpress.com/2015/01/brownine_mix.jpg | python3 -m json.tool | less
 
 nuts:
-curl -X GET http://localhost:3000/imageToFlags?imgUrl=https://static1.squarespace.com/static/5924f0e517bffc1bd4135b28/t/59250fb8e6f2e13e7e2ca84d/1495601395657/ingredient+list.png | python3 -m json.tool | pygmentize -l json | less -R
-curl -X GET http://localhost:3000/imageToIngredients?imgUrl=https://static1.squarespace.com/static/5924f0e517bffc1bd4135b28/t/59250fb8e6f2e13e7e2ca84d/1495601395657/ingredient+list.png | python3 -m json.tool | pygmentize -l json | less -R
+curl -X GET http://localhost:3000/imageToFlags?imgUrl=https://static1.squarespace.com/static/5924f0e517bffc1bd4135b28/t/59250fb8e6f2e13e7e2ca84d/1495601395657/ingredient+list.png | python3 -m json.tool | less
+curl -X GET http://localhost:3000/imageToIngredients?imgUrl=https://static1.squarespace.com/static/5924f0e517bffc1bd4135b28/t/59250fb8e6f2e13e7e2ca84d/1495601395657/ingredient+list.png | python3 -m json.tool | less\
+
+pic taken with phone camera:
+curl -X GET http://localhost:3000/imageToFlags?imgUrl=https://i.imgur.com/kwhk1ID.jpg | python3 -m json.tool | less
+curl -X GET http://localhost:3000/imageToIngredients?imgUrl=https://i.imgur.com/kwhk1ID.jpg | python3 -m json.tool | less
