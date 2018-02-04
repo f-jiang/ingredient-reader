@@ -1,6 +1,5 @@
 const express = require('express');
 const ingReader = require('./models/ingredientReader.js');
-const bodyParser = require('body-parser');
 const request = require('request');
 const querystring = require('querystring');
 const dotenv = require('dotenv');
