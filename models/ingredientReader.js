@@ -14,25 +14,33 @@ module.exports = {
 		fs.readFile('../data/flags.json', 'utf8', (err, data) => {
 			if (err) throw err; //if there's some problem (which should NEVER happen)
 			
-			objFlags = data; //My flag list ... 
+			objFlags = JSON.parse(data); //My flag list ... 
 
 			var objOutFlags = {}; //output
+
+			//console.log(JSON.stringify(objFlags)); //DEBUGGING
 
 			//INGREDIENT CHECK LOOP
 			//For each flag, check if each ingredient in the flag is in the ingredients 
 			for (flag in objFlags) {
 				var present = false; 
 
-				var flagLength = flag.length; 
+				//console.log("variable flag: "); //DEBUGGING
+				//console.log(flag);
+
+				var flagLength = objFlags[flag].length; 
 				//For each ingredient in the flag
 				for (var i = 0; i < flagLength; i++) {
+
+					//console.log(flag[i]);
 
 					//For each ingredient in ingredients
 					for (var j = 0; j < ingLength; j++) {
 						var compareIng = ingredients[j].toLowerCase();
 
 						//If we find a matching ingredient... 
-						if (compareIng.startsWith(flag[i])) {
+						if (compareIng.startsWith(objFlags[flag][i])) {
+
 							present = true;
 							break; 
 						}
@@ -62,7 +70,6 @@ module.exports = {
 		fs.readFile('../data/endwords.json', 'utf8', (err, data) => {
 			arrEndings = data; 
 
-			var index = 0;
 			//HUGE LOOP for collected data bigObj
 			for (region in bigObj.regions) {
 				for (line in region.lines) {
@@ -91,8 +98,7 @@ module.exports = {
 
 							//Add to the ingredients array if it hasn't ended... 
 							if (!end) {
-								arrIngredients[index] = word.text; 
-								index++;
+								arrIngredients.push(word.text); 
 							}
 						}
 					}
