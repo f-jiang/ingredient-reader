@@ -7,44 +7,47 @@ var fs = require('fs');
 // 	   - tree nuts
 //     - wheat
 
-function ingToFlags(ingredients, callback) {
-	var ingLength = ingredients.length;
+module.exports = {
+	ingToFlags: function(ingredients, callback) {
+		var ingLength = ingredients.length;
 
-	fs.readFile('../data/flags.json', 'utf8', (err, data) => {
-		if (err) throw err; //if there's some problem (which should NEVER happen)
-		
-		listFlags = JSON.parse(data); //My flag list ... 
+		fs.readFile('../data/flags.json', 'utf8', (err, data) => {
+			if (err) throw err; //if there's some problem (which should NEVER happen)
+			
+			objFlags = JSON.parse(data); //My flag list ... 
 
-		var objOutFlags; //output
+			var objOutFlags; //output
 
-		//INGREDIENT CHECK LOOP
-		//For each flag, check if each ingredient in the flag is in the ingredients 
-		for each (flag in listFlags) {
-			var present = false; 
+			//INGREDIENT CHECK LOOP
+			//For each flag, check if each ingredient in the flag is in the ingredients 
+			for flag in objFlags {
+				var present = false; 
 
-			var flagLength = flag.length; 
-			//For each ingredient in the flag
-			for (int i = 0; i < flagLength; i++) {
+				var flagLength = flag.length; 
+				//For each ingredient in the flag
+				for (int i = 0; i < flagLength; i++) {
 
-				//For each ingredient in ingredients
-				for (int j = 0; j < ingLength; j++) {
-					var compareIng = ingredients[i].toLowerCase();
+					//For each ingredient in ingredients
+					for (int j = 0; j < ingLength; j++) {
+						var compareIng = ingredients[i].toLowerCase();
 
-					//If we find a matching ingredient... 
-					if (compareIng.startsWith(flag[i])) {
-						present = true;
-						break; 
+						//If we find a matching ingredient... 
+						if (compareIng.startsWith(flag[i])) {
+							present = true;
+							break; 
+						}
+						if (present) break;
 					}
 					if (present) break;
 				}
-				if (present) break;
+				//Outputs json
+				objOutFlags[flag] = present; 
 			}
-			//Outputs json
-			objOutFlags[flag] = present; 
-		}
 
-		callback(objOutFlags); //Asynchronous
-		return objOutFlags; //Synchronous
+			callback(objOutFlags); //Asynchronous
+			return objOutFlags; //Synchronous
 
-	});
+		});
+	}
+
 }
