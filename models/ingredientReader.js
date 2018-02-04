@@ -73,7 +73,6 @@ var jsonToIng = function(bigObj, callback) {
     arrEndings = JSON.parse(data); 
     console.log(bigObj);
 
-      //HUGE FUCKING UGLY NESTED LOOP for collected data bigObj
       var regLength = bigObj["regions"].length;
 
     for (var i = 0; i < regLength; i++) {
@@ -91,11 +90,11 @@ var jsonToIng = function(bigObj, callback) {
         for (var k = 0; k < wordLength; k++) {
 
           //console.log(bigObj["regions"][i]["lines"][j].words[k]["text"]);
-          var whateverTheFuckThisIs = bigObj["regions"][i]["lines"][j]["words"][k]["text"];
+          var parsedWords = bigObj["regions"][i]["lines"][j]["words"][k]["text"];
 
           //If the 'ingredients' hasn't started yet ... 
           if (!start) {
-            if (strStart == whateverTheFuckThisIs.toLowerCase()) {
+            if (strStart == parsedWords.toLowerCase()) {
               //console.log("INPUTTING STARTED."); //DEBUGGING
               start = true;
             }
@@ -109,7 +108,7 @@ var jsonToIng = function(bigObj, callback) {
             var lenArrEndings = arrEndings.length; 
 
             for (var l = 0; l < lenArrEndings; l++) {
-              if (arrEndings[l] == whateverTheFuckThisIs.toLowerCase()) {
+              if (arrEndings[l] == parsedWords.toLowerCase()) {
                 //console.log("INPUTTING ENDED"); //DEBUGGING
                 end = true;
                 break;
@@ -119,7 +118,7 @@ var jsonToIng = function(bigObj, callback) {
             //Add to the ingredients array if it hasn't ended... 
             if (!end) {
               //console.log("INGREDIENT ADDED.") //DEBUGGING
-              arrIngredients.push(whateverTheFuckThisIs); 
+              arrIngredients.push(parsedWords); 
             }
           }
         }
