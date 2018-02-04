@@ -14,25 +14,33 @@ module.exports = {
 		fs.readFile('../data/flags.json', 'utf8', (err, data) => {
 			if (err) throw err; //if there's some problem (which should NEVER happen)
 			
-			objFlags = data; //My flag list ... 
+			objFlags = JSON.parse(data); //My flag list ... 
 
 			var objOutFlags = {}; //output
+
+			//console.log(JSON.stringify(objFlags)); //DEBUGGING
 
 			//INGREDIENT CHECK LOOP
 			//For each flag, check if each ingredient in the flag is in the ingredients 
 			for (flag in objFlags) {
 				var present = false; 
 
-				var flagLength = flag.length; 
+				//console.log("variable flag: "); //DEBUGGING
+				//console.log(flag);
+
+				var flagLength = objFlags[flag].length; 
 				//For each ingredient in the flag
 				for (var i = 0; i < flagLength; i++) {
+
+					//console.log(flag[i]);
 
 					//For each ingredient in ingredients
 					for (var j = 0; j < ingLength; j++) {
 						var compareIng = ingredients[j].toLowerCase();
 
 						//If we find a matching ingredient... 
-						if (compareIng.startsWith(flag[i])) {
+						if (compareIng.startsWith(objFlags[flag][i])) {
+
 							present = true;
 							break; 
 						}
@@ -53,24 +61,43 @@ module.exports = {
 	//Function that takes in the raw json file returned by Microsoft's ORC. 
 	//(attempts to) identify ingredients, and returns an array of them. 
 	jsonToIng: function(bigObj, callback) {
-		var strStart = "ingredients";
+
+		//console.log(bigObj);
+
+		var strStart = "ingredients:";
 		var start = false;
 		var end = false; 
 
 		var arrEndings;
-		var arrIngredients; 
+		var arrIngredients = []; 
 		fs.readFile('../data/endwords.json', 'utf8', (err, data) => {
-			arrEndings = data; 
+			arrEndings = JSON.parse(data); 
+			bigObj = JSON.parse(bigObj)
 
-			var index = 0;
-			//HUGE LOOP for collected data bigObj
-			for (region in bigObj.regions) {
-				for (line in region.lines) {
-					for (word in lines.words) {
+			//HUGE FUCKING UGLY NESTED LOOP for collected data bigObj
+			var regLength = bigObj["regions"].length;
+
+			for (var i = 0; i < regLength; i++) {
+
+				//console.log(bigObj["regions"][i]); //DEBUGGING
+
+				var lineLength = bigObj["regions"][i]["lines"].length;
+				//console.log("ELEMENTS IN A LINE: "); //DEBUGGING
+				//console.log(lineLength);
+				for (var j = 0; j < lineLength; j++) {
+
+					//console.log(bigObj["regions"][i]["lines"][j]); //DEBUGGING
+
+					var wordLength = bigObj["regions"][i]["lines"][j]["words"].length;
+					for (var k = 0; k < wordLength; k++) {
+
+						//console.log(bigObj["regions"][i]["lines"][j].words[k]["text"]);
+						var whateverTheFuckThisIs = bigObj["regions"][i]["lines"][j]["words"][k]["text"];
 
 						//If the 'ingredients' hasn't started yet ... 
 						if (!start) {
-							if (strStart == word.text.toLowerCase()) {
+							if (strStart == whateverTheFuckThisIs.toLowerCase()) {
+								//console.log("INPUTTING STARTED."); //DEBUGGING
 								start = true;
 							}
 						}
@@ -82,8 +109,9 @@ module.exports = {
 							//First let's check if it matches anything in the endwords list
 							var lenArrEndings = arrEndings.length; 
 
-							for (var i = 0; i < lenArrEndings; i++) {
-								if (arrEndings[i] == word.text.toLowerCase()) {
+							for (var l = 0; l < lenArrEndings; l++) {
+								if (arrEndings[l] == whateverTheFuckThisIs.toLowerCase()) {
+									//console.log("INPUTTING ENDED"); //DEBUGGING
 									end = true;
 									break;
 								}
@@ -91,8 +119,8 @@ module.exports = {
 
 							//Add to the ingredients array if it hasn't ended... 
 							if (!end) {
-								arrIngredients[index] = word.text; 
-								index++;
+								//console.log("INGREDIENT ADDED.") //DEBUGGING
+								arrIngredients.push(whateverTheFuckThisIs); 
 							}
 						}
 					}
