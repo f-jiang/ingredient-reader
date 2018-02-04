@@ -1,0 +1,291 @@
+{
+  "language": "en",
+  "orientation": "Up",
+  "regions": [
+    {
+      "boundingBox": "103,387,1861,1309",
+      "lines": [
+        {
+          "boundingBox": "106,387,1733,100",
+          "words": [
+            {
+              "boundingBox": "106,393,404,81",
+              "text": "INGREDIENTS:"
+            },
+            {
+              "boundingBox": "525,393,181,80",
+              "text": "WATER"
+            },
+            {
+              "boundingBox": "722,387,200,100",
+              "text": "(AQUA),"
+            },
+            {
+              "boundingBox": "936,393,203,81",
+              "text": "SODIUM"
+            },
+            {
+              "boundingBox": "1157,393,226,81",
+              "text": "LAURETH"
+            },
+            {
+              "boundingBox": "1399,393,234,94",
+              "text": "SULFATE,"
+            },
+            {
+              "boundingBox": "1647,393,192,81",
+              "text": "GLYCOL"
+            }
+          ]
+        },
+        {
+          "boundingBox": "106,514,1546,94",
+          "words": [
+            {
+              "boundingBox": "106,514,319,94",
+              "text": "DISTEARATE,"
+            },
+            {
+              "boundingBox": "440,514,473,80",
+              "text": "COCAMIDOPROPYL"
+            },
+            {
+              "boundingBox": "928,514,138,80",
+              "text": "BETA"
+            },
+            {
+              "boundingBox": "1076,515,77,93",
+              "text": "NE,"
+            },
+            {
+              "boundingBox": "1167,514,204,80",
+              "text": "SODIUM"
+            },
+            {
+              "boundingBox": "1386,514,266,94",
+              "text": "CHLORIDE,"
+            }
+          ]
+        },
+        {
+          "boundingBox": "106,628,1750,101",
+          "words": [
+            {
+              "boundingBox": "106,635,300,80",
+              "text": "FRAGRANCE"
+            },
+            {
+              "boundingBox": "421,628,273,101",
+              "text": "(PARFUM),"
+            },
+            {
+              "boundingBox": "709,635,260,94",
+              "text": "GLYCERIN,"
+            },
+            {
+              "boundingBox": "986,635,365,94",
+              "text": "DIMETHICONE,"
+            },
+            {
+              "boundingBox": "1365,635,491,94",
+              "text": "GLUCONOLACTONE,"
+            }
+          ]
+        },
+        {
+          "boundingBox": "106,755,1838,95",
+          "words": [
+            {
+              "boundingBox": "106,755,401,95",
+              "text": "DIMETHICONOL,"
+            },
+            {
+              "boundingBox": "521,755,665,85",
+              "text": "ACRYLATES/BEHENETH-25"
+            },
+            {
+              "boundingBox": "1202,756,402,80",
+              "text": "METHACRYLATE"
+            },
+            {
+              "boundingBox": "1618,755,326,95",
+              "text": "COPOLYMER,"
+            }
+          ]
+        },
+        {
+          "boundingBox": "103,876,1030,95",
+          "words": [
+            {
+              "boundingBox": "103,876,534,85",
+              "text": "STYRENE/ACRYLATES"
+            },
+            {
+              "boundingBox": "651,877,326,94",
+              "text": "COPOLYMER,"
+            },
+            {
+              "boundingBox": "992,877,141,80",
+              "text": "GUAR"
+            }
+          ]
+        },
+        {
+          "boundingBox": "640,997,1210,95",
+          "words": [
+            {
+              "boundingBox": "640,998,46,94",
+              "text": "D,"
+            },
+            {
+              "boundingBox": "700,997,204,81",
+              "text": "SODIUM"
+            },
+            {
+              "boundingBox": "919,997,233,95",
+              "text": "SULFATE,"
+            },
+            {
+              "boundingBox": "1166,997,307,95",
+              "text": "TREHALOSE,"
+            },
+            {
+              "boundingBox": "1486,997,364,81",
+              "text": "TETRASODIUM"
+            }
+          ]
+        },
+        {
+          "boundingBox": "106,1118,1846,95",
+          "words": [
+            {
+              "boundingBox": "106,1119,142,94",
+              "text": "EDTA,"
+            },
+            {
+              "boundingBox": "262,1118,491,95",
+              "text": "AMODIMETHICONE,"
+            },
+            {
+              "boundingBox": "770,1119,166,80",
+              "text": "DMDM"
+            },
+            {
+              "boundingBox": "1285,1118,247,95",
+              "text": "PEG-UM,"
+            },
+            {
+              "boundingBox": "1546,1118,265,81",
+              "text": "COCAMIDE"
+            },
+            {
+              "boundingBox": "1826,1119,126,94",
+              "text": "MEA,"
+            }
+          ]
+        },
+        {
+          "boundingBox": "103,1239,1861,95",
+          "words": [
+            {
+              "boundingBox": "103,1239,895,95",
+              "text": "TEA-DODECYLBENZENESULFONATE,"
+            },
+            {
+              "boundingBox": "1011,1239,117,81",
+              "text": "ARG"
+            },
+            {
+              "boundingBox": "1138,1240,133,94",
+              "text": "NINE,"
+            },
+            {
+              "boundingBox": "1288,1239,171,81",
+              "text": "LYSINE"
+            },
+            {
+              "boundingBox": "1597,1239,367,81",
+              "text": "CETRIMONIUM"
+            }
+          ]
+        },
+        {
+          "boundingBox": "104,1360,1858,94",
+          "words": [
+            {
+              "boundingBox": "104,1360,261,94",
+              "text": "CHLORIDE,"
+            },
+            {
+              "boundingBox": "382,1360,165,94",
+              "text": "PPG-9,"
+            },
+            {
+              "boundingBox": "564,1360,287,81",
+              "text": "PROPYLENE"
+            },
+            {
+              "boundingBox": "865,1360,204,94",
+              "text": "GLYCOL,"
+            },
+            {
+              "boundingBox": "1084,1360,878,94",
+              "text": "METHYLCHLOROISOTHIAZOLINONE,"
+            }
+          ]
+        },
+        {
+          "boundingBox": "105,1475,1813,100",
+          "words": [
+            {
+              "boundingBox": "105,1481,673,94",
+              "text": "METHYLISOTHIAZOLINONE,"
+            },
+            {
+              "boundingBox": "793,1481,128,80",
+              "text": "MICA"
+            },
+            {
+              "boundingBox": "1012,1475,191,100",
+              "text": "77019),"
+            },
+            {
+              "boundingBox": "1216,1481,248,81",
+              "text": "TITANIUM"
+            },
+            {
+              "boundingBox": "1481,1481,199,81",
+              "text": "DIOXIDE"
+            },
+            {
+              "boundingBox": "1771,1483,147,79",
+              "text": "77891"
+            }
+          ]
+        },
+        {
+          "boundingBox": "325,1596,767,100",
+          "words": [
+            {
+              "boundingBox": "325,1605,26,78",
+              "text": "5"
+            },
+            {
+              "boundingBox": "448,1596,192,100",
+              "text": "19140),"
+            },
+            {
+              "boundingBox": "764,1604,57,79",
+              "text": "33"
+            },
+            {
+              "boundingBox": "920,1596,172,95",
+              "text": "17200)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "textAngle": 0.0
+}
