@@ -57,8 +57,8 @@
 	],
 	"wheat" : [
 		"bread crumbs",
-		"bulgur"
-		"cereal extract"
+		"bulgur",
+		"cereal extract",
 		"club wheat",
 		"couscous",
 		"cracker meal",
@@ -82,6 +82,6 @@
 		"triticale",
 		"vital wheat gluten",
 		"wheat",
-		"whole wheat",
+		"whole wheat"
 	]
 }
